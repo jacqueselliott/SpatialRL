@@ -1,0 +1,19 @@
+==========> Opened at 2017-01-13 16:58:27.4215208 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-13 16:58:27.5401914 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe worker_package unpack]
+debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found version '9.0.2' in file C:\tensorflow\work\SpatialRL\spatialos.json
+debug In '', spatial [package retrieve worker_sdk windows_x64 9.0.2 C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\b05e2d179630688d7c68aa7179cb8637f025483c\worker_sdk\9.0.2\windows_x64.zip]
+debug Visiting url: https://auth.improbable.io/auth/v1/authorize?client_id=improbable_cli_client_go&redirect_uri=http%3A%2F%2Flocalhost%3A12000%2Fauthcode&response_type=code&scope=%5B%2A%5D%3A%2A
+debug Successfully downloaded package type 'worker_sdk' with name 'windows_x64' and version '9.0.2' to 'C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\b05e2d179630688d7c68aa7179cb8637f025483c\worker_sdk\9.0.2\windows_x64.zip'
+debug time="2017-01-13T16:58:28Z" level=info msg="Visiting url: https://auth.improbable.io/auth/v1/authorize?client_id=improbable_cli_client_go&redirect_uri=http%3A%2F%2Flocalhost%3A12000%2Fauthcode&response_type=code&scope=%5B%2A%5D%3A%2A" 
+time="2017-01-13T16:58:33Z" level=info msg="Successfully downloaded package type 'worker_sdk' with name 'windows_x64' and version '9.0.2' to 'C:\\Users\\Jacques Elliott\\AppData\\Local\\.improbable\\toolbelt\\cache\\worker_package\\b05e2d179630688d7c68aa7179cb8637f025483c\\worker_sdk\\9.0.2\\windows_x64.zip'" 
+
+debug Cannot read hash file or package: open worker_sdk/.spatialos_worker_target.json_hash: The system cannot find the path specified.. Re-extracting.
+debug Unpacking windows_x64.zip
+info Extracting packages 1/1 percent=100
+info 'sdk.exe worker_package unpack' finished duration=7.1s category=success
