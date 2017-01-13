@@ -1,0 +1,52 @@
+==========> Opened at 2017-01-13 07:19:57.8242536 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\BlankProject\workers\unity
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-13 07:19:57.9522105 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe worker_package unpack-to worker_sdk windows_x86_dll C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86\Improbable\windows_x86_dll]
+debug Current directory = C:\tensorflow\work\BlankProject\workers\unity
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found version '9.0.2' in file C:\tensorflow\work\BlankProject\spatialos.json
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\6c89c822570877ea9816c6c1366268da3efca8dc\worker_sdk\9.0.2\windows_x86_dll.zip] to C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86\Improbable\windows_x86_dll. Nothing has changed.
+info 'sdk.exe worker_package unpack-to worker_sdk windows_x86_dll C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86\Improbable\windows_x86_dll' finished duration=0.0s category=success
+==========> Opened at 2017-01-13 07:19:58.8064833 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\BlankProject\workers\unity
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-13 07:19:58.936247 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe worker_package unpack-to worker_sdk windows_x64_dll C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86_64\Improbable\windows_x64_dll]
+debug Current directory = C:\tensorflow\work\BlankProject\workers\unity
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found version '9.0.2' in file C:\tensorflow\work\BlankProject\spatialos.json
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\0981f64ab993a3122ad4dcac9a1ca31eeacc201c\worker_sdk\9.0.2\windows_x64_dll.zip] to C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86_64\Improbable\windows_x64_dll. Nothing has changed.
+info 'sdk.exe worker_package unpack-to worker_sdk windows_x64_dll C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86_64\Improbable\windows_x64_dll' finished duration=0.0s category=success
+==========> Opened at 2017-01-13 07:20:05.2535406 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\BlankProject\workers\unity
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-13 07:20:06.8136402 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\BlankProject\workers\unity
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-13 07:20:06.9467123 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe worker_package unpack-to worker_sdk linux_x64_dll C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86_64\Improbable\linux_x64_dll]
+debug Current directory = C:\tensorflow\work\BlankProject\workers\unity
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found version '9.0.2' in file C:\tensorflow\work\BlankProject\spatialos.json
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\b57ea5ab27f2cf18eb9e0c1cb6477f5aa26fe2cd\worker_sdk\9.0.2\linux_x64_dll.zip] to C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86_64\Improbable\linux_x64_dll. Nothing has changed.
+info 'sdk.exe worker_package unpack-to worker_sdk linux_x64_dll C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86_64\Improbable\linux_x64_dll' finished duration=0.0s category=success
+==========> Opened at 2017-01-13 07:20:07.7631351 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\BlankProject\workers\unity
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-13 07:20:07.8983153 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe worker_package unpack-to worker_sdk windows_x64_dll C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86_64\Improbable\windows_x64_dll]
+debug Current directory = C:\tensorflow\work\BlankProject\workers\unity
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found version '9.0.2' in file C:\tensorflow\work\BlankProject\spatialos.json
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\0981f64ab993a3122ad4dcac9a1ca31eeacc201c\worker_sdk\9.0.2\windows_x64_dll.zip] to C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86_64\Improbable\windows_x64_dll. Nothing has changed.
+info 'sdk.exe worker_package unpack-to worker_sdk windows_x64_dll C:\tensorflow\work\BlankProject\workers\unity\Assets\Plugins\x86_64\Improbable\windows_x64_dll' finished category=success duration=0.0s
+==========> Opened at 2017-01-13 07:20:14.0988721 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\BlankProject\workers\unity
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2

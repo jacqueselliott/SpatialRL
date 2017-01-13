@@ -1,0 +1,20 @@
+{
+  "targets": [
+    {
+      "path": "Assets/Improbable/Dependencies",
+      "type": "unity",
+
+      "packages": [
+        {
+          "name": "Improbable.EditorTools"
+        },
+        {
+          "name": "Improbable.Unity"
+        },
+        {
+          "name": "Improbable.Unity.Dependencies"
+        }
+      ]
+    }
+  ]
+}
