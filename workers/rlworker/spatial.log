@@ -1,19 +1,100 @@
-==========> Opened at 2017-01-13 16:58:27.4215208 +0000 GMT
+==========> Opened at 2017-01-14 14:53:08.4909119 +0000 GMT
 debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
 debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
 debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
-==========> Opened at 2017-01-13 16:58:27.5401914 +0000 GMT
-debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe worker_package unpack]
+==========> Opened at 2017-01-14 14:53:08.6229095 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe build rlworker]
 debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
 debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug In '', spatial [init]
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.ivy2\improbable.credentials
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.m2\settings.xml
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\3f2f04d34058cd8b06deb80ce91e435e629aab03\schema\9.0.2\WorkerSdkSchema.zip] to C:\tensorflow\work\SpatialRL\build\dependencies\schema\WorkerSdkSchema. Nothing has changed.
+debug Found project root at C:\tensorflow\work\SpatialRL
 debug Found version '9.0.2' in file C:\tensorflow\work\SpatialRL\spatialos.json
-debug In '', spatial [package retrieve worker_sdk windows_x64 9.0.2 C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\b05e2d179630688d7c68aa7179cb8637f025483c\worker_sdk\9.0.2\windows_x64.zip]
-debug Visiting url: https://auth.improbable.io/auth/v1/authorize?client_id=improbable_cli_client_go&redirect_uri=http%3A%2F%2Flocalhost%3A12000%2Fauthcode&response_type=code&scope=%5B%2A%5D%3A%2A
-debug Successfully downloaded package type 'worker_sdk' with name 'windows_x64' and version '9.0.2' to 'C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\b05e2d179630688d7c68aa7179cb8637f025483c\worker_sdk\9.0.2\windows_x64.zip'
-debug time="2017-01-13T16:58:28Z" level=info msg="Visiting url: https://auth.improbable.io/auth/v1/authorize?client_id=improbable_cli_client_go&redirect_uri=http%3A%2F%2Flocalhost%3A12000%2Fauthcode&response_type=code&scope=%5B%2A%5D%3A%2A" 
-time="2017-01-13T16:58:33Z" level=info msg="Successfully downloaded package type 'worker_sdk' with name 'windows_x64' and version '9.0.2' to 'C:\\Users\\Jacques Elliott\\AppData\\Local\\.improbable\\toolbelt\\cache\\worker_package\\b05e2d179630688d7c68aa7179cb8637f025483c\\worker_sdk\\9.0.2\\windows_x64.zip'" 
+error ************************************
+Error: unparsable field Build.Tasks: json: cannot unmarshal array into Go value of type improbable_spatial_sdk_json.WorkerBuildTasks
+************************************
 
-debug Cannot read hash file or package: open worker_sdk/.spatialos_worker_target.json_hash: The system cannot find the path specified.. Re-extracting.
-debug Unpacking windows_x64.zip
-info Extracting packages 1/1 percent=100
-info 'sdk.exe worker_package unpack' finished duration=7.1s category=success
+info 'sdk.exe build rlworker' failed duration=0.7s category=failure
+==========> Opened at 2017-01-14 14:53:36.50458 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-14 14:53:36.6351612 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe build rlworker --log_level=debug]
+debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug In '', spatial [init]
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.ivy2\improbable.credentials
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.m2\settings.xml
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\3f2f04d34058cd8b06deb80ce91e435e629aab03\schema\9.0.2\WorkerSdkSchema.zip] to C:\tensorflow\work\SpatialRL\build\dependencies\schema\WorkerSdkSchema. Nothing has changed.
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug Found version '9.0.2' in file C:\tensorflow\work\SpatialRL\spatialos.json
+error ************************************
+Error: unparsable field Build.Tasks: json: cannot unmarshal array into Go value of type improbable_spatial_sdk_json.WorkerBuildTasks
+************************************
+
+info 'sdk.exe build rlworker' failed duration=0.7s category=failure
+==========> Opened at 2017-01-14 15:02:27.9120399 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-14 15:02:28.0427897 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe codegen cpp]
+debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug In '', spatial [init]
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.ivy2\improbable.credentials
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.m2\settings.xml
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\3f2f04d34058cd8b06deb80ce91e435e629aab03\schema\9.0.2\WorkerSdkSchema.zip] to C:\tensorflow\work\SpatialRL\build\dependencies\schema\WorkerSdkSchema. Nothing has changed.
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug Found version '9.0.2' in file C:\tensorflow\work\SpatialRL\spatialos.json
+error ************************************
+Error: Worker cpp not found.
+************************************
+
+info 'sdk.exe codegen cpp' failed duration=0.7s category=failure
+==========> Opened at 2017-01-14 15:11:57.976107 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-14 15:11:58.1037192 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe codegen cpp]
+debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug In '', spatial [init]
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.ivy2\improbable.credentials
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.m2\settings.xml
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\3f2f04d34058cd8b06deb80ce91e435e629aab03\schema\9.0.2\WorkerSdkSchema.zip] to C:\tensorflow\work\SpatialRL\build\dependencies\schema\WorkerSdkSchema. Nothing has changed.
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug Found version '9.0.2' in file C:\tensorflow\work\SpatialRL\spatialos.json
+error ************************************
+Error: Worker cpp not found.
+************************************
+
+info 'sdk.exe codegen cpp' failed duration=2.3s category=failure
+==========> Opened at 2017-01-14 15:12:03.2770703 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-14 15:12:03.4051507 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe build rlworker --log_level=debug]
+debug Current directory = C:\tensorflow\work\SpatialRL\workers\rlworker
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug In '', spatial [init]
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.ivy2\improbable.credentials
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.m2\settings.xml
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\3f2f04d34058cd8b06deb80ce91e435e629aab03\schema\9.0.2\WorkerSdkSchema.zip] to C:\tensorflow\work\SpatialRL\build\dependencies\schema\WorkerSdkSchema. Nothing has changed.
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug Found version '9.0.2' in file C:\tensorflow\work\SpatialRL\spatialos.json
+error ************************************
+Error: unparsable field Build.Tasks: json: cannot unmarshal array into Go value of type improbable_spatial_sdk_json.WorkerBuildTasks
+************************************
+
+info 'sdk.exe build rlworker' failed duration=0.7s category=failure

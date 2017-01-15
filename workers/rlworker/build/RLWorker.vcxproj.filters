@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\gameplay\GoalSphere.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\gameplay\GoalSphere.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\general\WorldTransform.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\general\WorldTransform.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\general\WorldVelocity.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\general\WorldVelocity.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\DroneControls.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\DroneControls.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\terrain\Terrain.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\terrain\Terrain.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\rlworker.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\tensorflow\work\SpatialRL\workers\rlworker\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7A6FB534-428E-394A-88DB-4BCF18E52881}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

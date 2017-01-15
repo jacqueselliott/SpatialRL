@@ -1,0 +1,54 @@
+{
+  "tasks": [
+    {
+      "name": "Codegen",
+      "steps": [
+        {
+            "name": "C++",
+            "arguments": ["process_schema", "--output", "generated", "--language", "cpp", "-i", "../../build/dependencies/WorkerSdkSchema",
+                      "-i", "../../schema"]
+        }
+      ]
+    },
+    {
+      "name": "Build",
+      "steps": [
+        {
+          "name": "Codegen",
+          "arguments": ["invoke-task", "Codegen"]
+        },
+        {
+          "name": "Prepare build directory",
+          "command": "bash",
+          "arguments": ["-c", "mkdir -p build"]
+        },
+        {
+          "name": "CMake steps",
+          "working_path": "build",
+          "command": "bash",
+          "arguments": ["../generate.sh"]
+        },
+        {
+          "name": "C++",
+          "working_path": "build",
+          "command": "cmake",
+          "arguments": ["--build", ".", "--config", "Release"]
+        }
+        ]
+    },
+    {
+      "name": "Clean",
+      "steps": [
+        {
+          "name": "Generated Code",
+          "arguments": ["process_schema", "clean", "generated"]
+        },
+        {
+          "name": "Build files",
+          "command": "bash",
+          "arguments": ["-c", "rm -rf build"]
+        } 
+      ]
+    }
+  ]
+}
