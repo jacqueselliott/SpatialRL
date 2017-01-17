@@ -1,5 +1,6 @@
 spatial.log
 CMakeLists.txt
+spatialos_worker_packages.json
 .improbable/
 build/
 generated/
