@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\tensorflow\work\SpatialRL\workers\rlworker\CMakeLists.txt" />
+    <CustomBuild Include="C:\tensorflow\work\SpatialRL\workers\rlworker\build\CMakeFiles\48a4659aa7db17bf450b1e686b025ee3\create_zip.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\tensorflow\work\SpatialRL\workers\rlworker\build\CMakeFiles\create_zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E905586F-728F-3628-ABDC-64E976BDA8A4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

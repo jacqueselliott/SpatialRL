@@ -23,3 +23,26 @@ FILE(GLOB_RECURSE SOURCES "${PROJECT_SOURCE_DIR}/*.cc")
 # Build the worker
 add_executable(RLWorker ${SOURCES})
 target_link_libraries(RLWorker ${LIB_WORKER_SDK} ${LIB_PROTO} ${LIB_SSL} ${LIB_RAKNET} ${CMAKE_DL_LIBS} ${LIB_CORE_SDK} ${LIB_GPR} ${LIB_GPRC} ${LIB_GPRCPP} ${LIB_Z_STATIC})
+
+# zip
+set(WORKER_ASSEMBLY_DIR "${PROJECT_SOURCE_DIR}/../../build/assembly/worker")
+file(MAKE_DIRECTORY ${WORKER_ASSEMBLY_DIR})
+
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
+	set(WORKER_NAME "RLWorker@Mac")
+	set(TARGET_NAME "${WORKER_NAME}")
+elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
+	set(WORKER_NAME "RLWorker@${CMAKE_SYSTEM_NAME}")
+	set(TARGET_NAME "${WORKER_NAME}.exe")
+else()
+	set(WORKER_NAME "RLWorker@${CMAKE_SYSTEM_NAME}")
+	set(TARGET_NAME "${WORKER_NAME}")
+endif()
+
+add_custom_target(create_zip ALL
+	WORKING_DIRECTORY "${WORKER_ASSEMBLY_DIR}"
+	COMMAND ${CMAKE_COMMAND} -E copy "$<TARGET_FILE:RLWorker>" "."
+	COMMAND ${CMAKE_COMMAND} -E rename "${WORKER_ASSEMBLY_DIR}/$<TARGET_FILE_NAME:RLWorker>" "${WORKER_ASSEMBLY_DIR}/${TARGET_NAME}"
+	COMMAND ${CMAKE_COMMAND} -E tar "cfv" "${WORKER_NAME}.zip" --format=zip "${TARGET_NAME}"
+	COMMAND ${CMAKE_COMMAND} -E remove "${TARGET_NAME}"
+	DEPENDS RLWorker)

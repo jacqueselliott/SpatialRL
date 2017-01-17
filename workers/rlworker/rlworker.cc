@@ -7,29 +7,32 @@ static const std::string kWorkerType = "RLWorker";
 static const std::string kLoggerName = "rlworker.cc";
 
 int main(int argc, char** argv) {
-  if (argc != 4) {
-    std::cout << "Usage: " << argv[0] << " <hostname> <port> <worker id>" << std::endl;
-    std::cout << "For example: " << argv[0] << " localhost 7777 RLWorker0" << std::endl;
-    return 1;
+  if (argc < 2 || 3 < argc) {
+    return argc;
   }
 
-  const std::string hostname = argv[1];
-  const std::uint16_t port = static_cast<std::uint16_t>(std::stoul(argv[2]));
-  const std::string worker_id = argv[3];
+  worker::ConnectionParameters parameters;
+  parameters.WorkerType = "rlworker";
+  parameters.WorkerId = argv[1];
+  parameters.Network.ConnectionType = worker::NetworkConnectionType::kTcp;
+  parameters.Network.UseExternalIp = false;
 
-  worker::ConnectionParameters params;
-  params.WorkerType = kWorkerType;
-  params.WorkerId = worker_id;
-  params.Network.UseExternalIp = true;
-  params.Network.Tcp.MultiplexLevel = 4;
-  worker::Connection connection{hostname, port, params};
+  std::string hostname = "localhost";
+  if (argc == 3) {
+    hostname = argv[2];
+  }
 
+  std::unique_ptr<worker::Connection> connection;
+  connection.reset(new worker::Connection{hostname, 7777, parameters});
   worker::View view;
 
-  for (;;) {
-    // Get the operations since the last time.
-    auto op_list = connection.GetOpList(0);
-    // Process and dispatch.
-    view.Process(op_list);
-  }
+  //std::cout << kWorkerType << " started" << std::endl;
+
+
+  // for (;;) {
+  //   // Get the operations since the last time.
+  //   auto op_list = connection.GetOpList(0);
+  //   // Process and dispatch.
+  //   view.Process(op_list);
+  // }
 }

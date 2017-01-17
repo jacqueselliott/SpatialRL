@@ -34,6 +34,16 @@
           "grid_height": 1
         }
       }
+    },
+    {
+    "worker_type": "RLWorker",
+    "load_balancing": {
+        "static_hex_grid": {
+          "worker_radius_meters": 500.0,
+          "grid_width": 1,
+          "grid_height": 1
+        }
+      }
     }
   ]
 }

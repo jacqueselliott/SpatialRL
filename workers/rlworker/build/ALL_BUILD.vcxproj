@@ -168,6 +168,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:/tensorflow/work/SpatialRL/workers/rlworker/build/RLWorker.vcxproj">
       <Project>7594FE65-3421-3F51-92B5-C71C3AA02353</Project>
     </ProjectReference>
+    <ProjectReference Include="C:/tensorflow/work/SpatialRL/workers/rlworker/build/create_zip.vcxproj">
+      <Project>0A6F610D-49F3-370F-BDD3-080CA77BCF98</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
