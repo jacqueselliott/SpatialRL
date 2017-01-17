@@ -1,0 +1,6 @@
+spatial.log
+CMakeLists.txt
+/.improbable/
+/build/
+/generated/
+/worker_sdk/
