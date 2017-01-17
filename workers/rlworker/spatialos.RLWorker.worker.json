@@ -28,6 +28,11 @@
          "artifact_name": "RLWorker@Windows.zip",
          "command": "RLWorker@Windows.exe",
          "arguments": ["rl0"]
+       },
+       "macos": {
+         "artifact_name": "RLWorker@Mac.zip",
+         "command": "RLWorker@Mac",
+         "arguments": ["rl0"]
        }
    },
    "external": {

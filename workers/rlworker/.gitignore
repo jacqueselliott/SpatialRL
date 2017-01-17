@@ -2,6 +2,7 @@ spatial.log
 CMakeLists.txt
 spatialos_worker_packages.json
 .improbable/
+spatialos_worker_packages.json
 build/
 generated/
 worker_sdk/
