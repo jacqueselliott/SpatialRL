@@ -22,17 +22,16 @@ int main(int argc, char** argv) {
     hostname = argv[2];
   }
 
-  std::unique_ptr<worker::Connection> connection;
-  connection.reset(new worker::Connection{hostname, 7777, parameters});
+  worker::Connection connection = worker::Connection(hostname, 7777, parameters);
   worker::View view;
 
-  //std::cout << kWorkerType << " started" << std::endl;
+  std::cout << kWorkerType << " started" << std::endl;
 
 
-  // for (;;) {
-  //   // Get the operations since the last time.
-  //   auto op_list = connection.GetOpList(0);
-  //   // Process and dispatch.
-  //   view.Process(op_list);
-  // }
+  for (;;) {
+     // Get the operations since the last time.
+     //auto op_list = connection.GetOpList(0);
+     // Process and dispatch.
+     //view.Process(op_list);
+   }
 }
