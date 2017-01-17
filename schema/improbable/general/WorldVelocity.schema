@@ -1,0 +1,7 @@
+package improbable.general;
+
+component WorldVelocity {
+    id = 1004;
+    // Entity's true velocity within simulation
+    Vector3f velocity = 1;
+}

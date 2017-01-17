@@ -1,0 +1,13 @@
+ManifestFileVersion: 0
+CRC: 2955354792
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: drone
+      Dependencies: {}
+    Info_1:
+      Name: goalsphere
+      Dependencies: {}
+    Info_2:
+      Name: terrain
+      Dependencies: {}

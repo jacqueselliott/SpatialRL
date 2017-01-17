@@ -1,0 +1,13 @@
+{
+  "targets": [
+    {
+      "path": "worker_sdk",
+      "type": "worker_sdk",
+      "packages": [
+        {
+          "name": "windows_x64"
+        }
+      ]
+    }
+  ]
+}
