@@ -5,7 +5,7 @@
       "steps": [
         {
             "name": "C++",
-            "arguments": ["process_schema", "--output", "generated", "--language", "cpp", "-i", "../../build/dependencies/WorkerSdkSchema",
+            "arguments": ["process_schema", "--output", "generated", "--language", "cpp", "-i", "../../build/dependencies/schema/WorkerSdkSchema",
                       "-i", "../../schema"]
         }
       ]

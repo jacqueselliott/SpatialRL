@@ -1,112 +1,3 @@
-==========> Opened at 2017-01-16 18:52:23.3617902 +0000 GMT
-debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
-debug Current directory = C:\tensorflow\work\SpatialRL
-debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
-==========> Opened at 2017-01-16 18:52:23.8559277 +0000 GMT
-debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe build RLWorker]
-debug Current directory = C:\tensorflow\work\SpatialRL
-debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
-debug Found project root at C:\tensorflow\work\SpatialRL
-debug In '', spatial [init]
-debug successfully wrote credentials to C:\Users\Jacques Elliott\.ivy2\improbable.credentials
-debug successfully wrote credentials to C:\Users\Jacques Elliott\.m2\settings.xml
-debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\3f2f04d34058cd8b06deb80ce91e435e629aab03\schema\9.0.2\WorkerSdkSchema.zip] to C:\tensorflow\work\SpatialRL\build\dependencies\schema\WorkerSdkSchema. Nothing has changed.
-debug Found project root at C:\tensorflow\work\SpatialRL
-debug Found version '9.0.2' in file C:\tensorflow\work\SpatialRL\spatialos.json
-info Generating bridge settings for RLWorker.
-info Generating managed worker configuration for RLWorker.
-info Running task 'build' for 'RLWorker'
-info [1/4] > Build Codegen category=heading
-info [1/1] > Codegen C++ category=heading
-debug Executing internal command: [process_schema --output generated --language cpp -i ../../build/dependencies/WorkerSdkSchema -i ../../schema]
-debug Found version '9.0.2' in file C:\tensorflow\work\SpatialRL\spatialos.json
-debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\731c4cf646fbe1f8dfc9f7992d21f84b8d6eec5b\protocol\9.0.2\protocol.zip C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\b1496c8a34a85b268f09141affa7aad51178cb32\protoc\9.0.2\windows_x64.zip C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\8457fb9aeb5f0afffde72b3fb461fcf91423bf16\protobuf\9.0.2\protobuf-net.zip] to C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache. Nothing has changed.
-info   No changes detected, skipping code generation.
-info [1/1] < Codegen C++ duration=0.1s category=success
-info >>> Codegen duration=0.1s category=neutral
-info [1/4] < Build Codegen duration=0.1s category=success
-info [2/4] > Build Prepare build directory category=heading
-debug In '', bash [-c mkdir -p build]
-info [2/4] < Build Prepare build directory duration=0.7s category=success
-info [3/4] > Build CMake steps category=heading
-debug In 'build', bash [../generate.sh]
-debug -- Configuring done
-debug -- Generating done
-debug -- Build files have been written to: C:/tensorflow/work/SpatialRL/workers/rlworker/build
-info [3/4] < Build CMake steps category=success duration=1.9s
-info [4/4] > Build C++ category=heading
-debug In 'build', cmake [--build . --config Release]
-debug Microsoft (R) Build Engine version 14.0.24723.2
-debug Copyright (C) Microsoft Corporation. All rights reserved.
-debug 
-debug Build started 16/01/2017 18:52:30.
-debug The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
-debug The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
-debug Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" on node 1 (default targets).
-debug Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" (1) is building "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ZERO_CHECK.vcxproj" (2) on node 1 (default targets).
-debug InitializeBuildStatus:
-debug   Creating "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-debug CustomBuild:
-debug   All outputs are up-to-date.
-debug FinalizeBuildStatus:
-debug   Deleting file "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
-debug   Touching "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
-debug Done Building Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ZERO_CHECK.vcxproj" (default targets).
-debug The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
-debug Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" (1) is building "C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj" (3) on node 1 (default targets).
-debug InitializeBuildStatus:
-debug   Creating "RLWorker.dir\Release\RLWorker.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-debug CustomBuild:
-debug   All outputs are up-to-date.
-debug ClCompile:
-debug   C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IC:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include /IC:\tensorflow\work\SpatialRL\workers\rlworker\generated /nologo /W3 /WX- /O2 /Ob2 /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"RLWorker.dir\Release\\" /Fd"RLWorker.dir\Release\vc140.pdb" /Gd /TP /errorReport:queue C:\tensorflow\work\SpatialRL\workers\rlworker\rlworker.cc
-debug   rlworker.cc
-debug Link:
-debug   C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\tensorflow\work\SpatialRL\workers\rlworker\build\Release\RLWorker.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ..\worker_sdk\lib\WorkerSdk.lib ..\worker_sdk\lib\libprotobuf.lib ..\worker_sdk\lib\ssl.lib ..\worker_sdk\lib\RakNetLibStatic.lib ..\worker_sdk\lib\CoreSdk.lib ..\worker_sdk\lib\gpr.lib ..\worker_sdk\lib\grpc.lib ..\worker_sdk\lib\grpc++.lib ..\worker_sdk\lib\zlibstatic.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:/tensorflow/work/SpatialRL/workers/rlworker/build/Release/RLWorker.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/tensorflow/work/SpatialRL/workers/rlworker/build/Release/RLWorker.lib" /MACHINE:X64  /machine:x64 RLWorker.dir\Release\GoalSphere.obj
-debug   RLWorker.dir\Release\GoalSphere.pb.obj
-debug   RLWorker.dir\Release\WorldTransform.obj
-debug   RLWorker.dir\Release\WorldTransform.pb.obj
-debug   RLWorker.dir\Release\WorldVelocity.obj
-debug   RLWorker.dir\Release\WorldVelocity.pb.obj
-debug   RLWorker.dir\Release\DroneControls.obj
-debug   RLWorker.dir\Release\DroneControls.pb.obj
-debug   RLWorker.dir\Release\name.obj
-debug   RLWorker.dir\Release\name.pb.obj
-debug   RLWorker.dir\Release\Terrain.obj
-debug   RLWorker.dir\Release\Terrain.pb.obj
-debug   RLWorker.dir\Release\rlworker.obj
-debug   RLWorker.vcxproj -> C:\tensorflow\work\SpatialRL\workers\rlworker\build\Release\RLWorker.exe
-debug FinalizeBuildStatus:
-debug   Deleting file "RLWorker.dir\Release\RLWorker.tlog\unsuccessfulbuild".
-debug   Touching "RLWorker.dir\Release\RLWorker.tlog\RLWorker.lastbuildstate".
-debug Done Building Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj" (default targets).
-debug The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
-debug Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" (1) is building "C:\tensorflow\work\SpatialRL\workers\rlworker\build\create_zip.vcxproj" (4) on node 1 (default targets).
-debug InitializeBuildStatus:
-debug   Creating "x64\Release\create_zip\create_zip.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-debug CustomBuild:
-debug   RLWorker@Windows.exe
-debug FinalizeBuildStatus:
-debug   Deleting file "x64\Release\create_zip\create_zip.tlog\unsuccessfulbuild".
-debug   Touching "x64\Release\create_zip\create_zip.tlog\create_zip.lastbuildstate".
-debug Done Building Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\create_zip.vcxproj" (default targets).
-debug InitializeBuildStatus:
-debug   Creating "x64\Release\ALL_BUILD\ALL_BUILD.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
-debug CustomBuild:
-debug   All outputs are up-to-date.
-debug FinalizeBuildStatus:
-debug   Deleting file "x64\Release\ALL_BUILD\ALL_BUILD.tlog\unsuccessfulbuild".
-debug   Touching "x64\Release\ALL_BUILD\ALL_BUILD.tlog\ALL_BUILD.lastbuildstate".
-debug Done Building Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" (default targets).
-debug 
-debug Build succeeded.
-debug     0 Warning(s)
-debug     0 Error(s)
-debug 
-debug Time Elapsed 00:00:19.84
-info [4/4] < Build C++ duration=20.8s category=success
-info >>> Build duration=23.5s category=neutral
-info 'sdk.exe build RLWorker' finished duration=26.3s category=success
 ==========> Opened at 2017-01-16 21:20:52.2700345 +0000 GMT
 debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
 debug Current directory = C:\tensorflow\work\SpatialRL
@@ -9659,3 +9550,219 @@ debug Time Elapsed 00:00:01.16
 info [4/4] < Build C++ category=success duration=1.4s
 info >>> Build duration=2.5s category=neutral
 info 'sdk.exe build RLWorker' finished duration=4.3s category=success
+==========> Opened at 2017-01-17 00:08:48.3377167 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe plugin_export --log_level=warning]
+debug Current directory = C:\tensorflow\work\SpatialRL
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+==========> Opened at 2017-01-17 00:08:48.5096309 +0000 GMT
+debug Executing [C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2\sdk.exe build RLWorker]
+debug Current directory = C:\tensorflow\work\SpatialRL
+debug TOOLBELT_PATH = C:\Users\Jacques Elliott\AppData\Local\.improbable\bin\plugins\sdk\9.0.2
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug In '', spatial [init]
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.ivy2\improbable.credentials
+debug successfully wrote credentials to C:\Users\Jacques Elliott\.m2\settings.xml
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\3f2f04d34058cd8b06deb80ce91e435e629aab03\schema\9.0.2\WorkerSdkSchema.zip] to C:\tensorflow\work\SpatialRL\build\dependencies\schema\WorkerSdkSchema. Nothing has changed.
+debug Found project root at C:\tensorflow\work\SpatialRL
+debug Found version '9.0.2' in file C:\tensorflow\work\SpatialRL\spatialos.json
+info Generating bridge settings for RLWorker.
+info Generating managed worker configuration for RLWorker.
+info Running task 'build' for 'RLWorker'
+info [1/4] > Build Codegen category=heading
+info [1/1] > Codegen C++ category=heading
+debug Executing internal command: [process_schema --output generated --language cpp -i ../../build/dependencies/schema/WorkerSdkSchema -i ../../schema]
+debug Found version '9.0.2' in file C:\tensorflow\work\SpatialRL\spatialos.json
+debug Skipping extraction of [C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\731c4cf646fbe1f8dfc9f7992d21f84b8d6eec5b\protocol\9.0.2\protocol.zip C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\b1496c8a34a85b268f09141affa7aad51178cb32\protoc\9.0.2\windows_x64.zip C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\cache\worker_package\8457fb9aeb5f0afffde72b3fb461fcf91423bf16\protobuf\9.0.2\protobuf-net.zip] to C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache. Nothing has changed.
+debug Changes detected. Generating code.
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\SchemaCompiler.exe [--proto_out=.improbable\schema_codegen_cache\generated_ir --cpp_out=generated --schema_path=..\..\build\dependencies\schema\WorkerSdkSchema --schema_path=..\..\schema --load_all_schema_on_schema_path]
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\SchemaCompiler.exe [--proto_out=.improbable\schema_codegen_cache\generated_ir --cpp_out=generated --schema_path=..\..\build\dependencies\schema\WorkerSdkSchema --schema_path=..\..\schema ..\..\build\dependencies\schema\WorkerSdkSchema\improbable\standard_library.schema]
+info   Generating from schema 1/7 percent=14
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\SchemaCompiler.exe [--proto_out=.improbable\schema_codegen_cache\generated_ir --cpp_out=generated --schema_path=..\..\build\dependencies\schema\WorkerSdkSchema --schema_path=..\..\schema ..\..\schema\improbable\gameplay\GoalSphere.schema]
+info   Generating from schema 2/7 percent=28
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\SchemaCompiler.exe [--proto_out=.improbable\schema_codegen_cache\generated_ir --cpp_out=generated --schema_path=..\..\build\dependencies\schema\WorkerSdkSchema --schema_path=..\..\schema ..\..\schema\improbable\general\WorldTransform.schema]
+info   Generating from schema 3/7 percent=42
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\SchemaCompiler.exe [--proto_out=.improbable\schema_codegen_cache\generated_ir --cpp_out=generated --schema_path=..\..\build\dependencies\schema\WorkerSdkSchema --schema_path=..\..\schema ..\..\schema\improbable\general\WorldVelocity.schema]
+info   Generating from schema 4/7 percent=57
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\SchemaCompiler.exe [--proto_out=.improbable\schema_codegen_cache\generated_ir --cpp_out=generated --schema_path=..\..\build\dependencies\schema\WorkerSdkSchema --schema_path=..\..\schema ..\..\schema\improbable\player\DroneControls.schema]
+info   Generating from schema 5/7 percent=71
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\SchemaCompiler.exe [--proto_out=.improbable\schema_codegen_cache\generated_ir --cpp_out=generated --schema_path=..\..\build\dependencies\schema\WorkerSdkSchema --schema_path=..\..\schema ..\..\schema\improbable\player\name.schema]
+info   Generating from schema 6/7 percent=85
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\SchemaCompiler.exe [--proto_out=.improbable\schema_codegen_cache\generated_ir --cpp_out=generated --schema_path=..\..\build\dependencies\schema\WorkerSdkSchema --schema_path=..\..\schema ..\..\schema\improbable\terrain\Terrain.schema]
+info   Generating from schema 7/7 percent=100
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\protoc.exe [.improbable\schema_codegen_cache\generated_ir\improbable\gameplay\GoalSphere.proto --cpp_out=generated --proto_path=.improbable\schema_codegen_cache\generated_ir --proto_path=C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\proto]
+info   Generating output from intermediate protos 1/7 percent=14
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\protoc.exe [.improbable\schema_codegen_cache\generated_ir\improbable\general\WorldTransform.proto --cpp_out=generated --proto_path=.improbable\schema_codegen_cache\generated_ir --proto_path=C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\proto]
+info   Generating output from intermediate protos 2/7 percent=28
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\protoc.exe [.improbable\schema_codegen_cache\generated_ir\improbable\general\WorldVelocity.proto --cpp_out=generated --proto_path=.improbable\schema_codegen_cache\generated_ir --proto_path=C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\proto]
+info   Generating output from intermediate protos 3/7 percent=42
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\protoc.exe [.improbable\schema_codegen_cache\generated_ir\improbable\player\DroneControls.proto --cpp_out=generated --proto_path=.improbable\schema_codegen_cache\generated_ir --proto_path=C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\proto]
+info   Generating output from intermediate protos 4/7 percent=57
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\protoc.exe [.improbable\schema_codegen_cache\generated_ir\improbable\player\name.proto --cpp_out=generated --proto_path=.improbable\schema_codegen_cache\generated_ir --proto_path=C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\proto]
+info   Generating output from intermediate protos 5/7 percent=71
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\protoc.exe [.improbable\schema_codegen_cache\generated_ir\improbable\standard_library.proto --cpp_out=generated --proto_path=.improbable\schema_codegen_cache\generated_ir --proto_path=C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\proto]
+info   Generating output from intermediate protos 6/7 percent=85
+debug In '', C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\protoc.exe [.improbable\schema_codegen_cache\generated_ir\improbable\terrain\Terrain.proto --cpp_out=generated --proto_path=.improbable\schema_codegen_cache\generated_ir --proto_path=C:\Users\Jacques Elliott\AppData\Local\.improbable\toolbelt\9.0.2\process_schema_cache\proto]
+info   Generating output from intermediate protos 7/7 percent=100
+debug Saving cache data to .improbable\schema_codegen_cache\cpp\cpp.cache.json.
+info [1/1] < Codegen C++ category=success duration=1.8s
+info >>> Codegen duration=1.8s category=neutral
+info [1/4] < Build Codegen category=success duration=1.8s
+info [2/4] > Build Prepare build directory category=heading
+debug In '', bash [-c mkdir -p build]
+info [2/4] < Build Prepare build directory duration=0.1s category=success
+info [3/4] > Build CMake steps category=heading
+debug In 'build', bash [../generate.sh]
+debug -- Configuring done
+debug -- Generating done
+debug -- Build files have been written to: C:/tensorflow/work/SpatialRL/workers/rlworker/build
+info [3/4] < Build CMake steps duration=0.4s category=success
+info [4/4] > Build C++ category=heading
+debug In 'build', cmake [--build . --config Release]
+debug Microsoft (R) Build Engine version 14.0.24723.2
+debug Copyright (C) Microsoft Corporation. All rights reserved.
+debug 
+debug Build started 17/01/2017 00:08:51.
+debug The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
+debug The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
+debug Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" on node 1 (default targets).
+debug Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" (1) is building "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ZERO_CHECK.vcxproj" (2) on node 1 (default targets).
+debug InitializeBuildStatus:
+debug   Creating "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+debug CustomBuild:
+debug   All outputs are up-to-date.
+debug FinalizeBuildStatus:
+debug   Deleting file "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+debug   Touching "x64\Release\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+debug Done Building Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ZERO_CHECK.vcxproj" (default targets).
+debug The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
+debug Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" (1) is building "C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj" (3) on node 1 (default targets).
+debug InitializeBuildStatus:
+debug   Creating "RLWorker.dir\Release\RLWorker.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+debug CustomBuild:
+debug   All outputs are up-to-date.
+debug ClCompile:
+debug   C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IC:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include /IC:\tensorflow\work\SpatialRL\workers\rlworker\generated /nologo /W3 /WX- /O2 /Ob2 /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"RLWorker.dir\Release\\" /Fd"RLWorker.dir\Release\vc140.pdb" /Gd /TP /errorReport:queue C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\gameplay\GoalSphere.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\gameplay\GoalSphere.pb.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\general\WorldTransform.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\general\WorldTransform.pb.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\general\WorldVelocity.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\general\WorldVelocity.pb.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\DroneControls.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\DroneControls.pb.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.pb.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.pb.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\terrain\Terrain.cc C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\terrain\Terrain.pb.cc
+debug   GoalSphere.cc
+debug   GoalSphere.pb.cc
+debug   WorldTransform.cc
+debug   WorldTransform.pb.cc
+debug   WorldVelocity.cc
+debug   WorldVelocity.pb.cc
+debug   DroneControls.cc
+debug   DroneControls.pb.cc
+debug   name.cc
+debug   name.pb.cc
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.pb.cc(292): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.pb.cc(330): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.pb.cc(350): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+debug   standard_library.cc
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(291): warning C4800: 'google::protobuf::Map<google::protobuf::uint32,schema::improbable::WorkerPredicate>::size_type': forcing value to bool 'true' or 'false' (performance warning) [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(289): note: while compiling class template member function 'bool google::protobuf::internal::MapField<google::protobuf::uint32,schema::improbable::WorkerPredicate,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::DeleteMapValue(const google::protobuf::MapKey &)'
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable/standard_library.pb.h(438): note: see reference to class template instantiation 'google::protobuf::internal::MapField<google::protobuf::uint32,schema::improbable::WorkerPredicate,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>' being compiled
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(217): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(215): note: while compiling class template member function 'int google::protobuf::internal::MapField<google::protobuf::uint32,schema::improbable::WorkerPredicate,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const'
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable/standard_library.pb.h(953): note: see reference to function template instantiation 'int google::protobuf::internal::MapField<google::protobuf::uint32,schema::improbable::WorkerPredicate,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const' being compiled
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_lite.h(152): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_lite.h(151): note: while compiling class template member function 'int google::protobuf::internal::MapFieldLite<Key,T,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const'
+debug           with
+debug           [
+debug               Key=google::protobuf::uint32,
+debug               T=schema::improbable::WorkerPredicate
+debug           ]
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field.h(220): note: see reference to class template instantiation 'google::protobuf::internal::MapFieldLite<Key,T,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>' being compiled
+debug           with
+debug           [
+debug               Key=google::protobuf::uint32,
+debug               T=schema::improbable::WorkerPredicate
+debug           ]
+debug   standard_library.pb.cc
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.pb.cc(412): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.pb.cc(450): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.pb.cc(470): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(291): warning C4800: 'google::protobuf::Map<google::protobuf::uint32,schema::improbable::WorkerPredicate>::size_type': forcing value to bool 'true' or 'false' (performance warning) [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(289): note: while compiling class template member function 'bool google::protobuf::internal::MapField<google::protobuf::uint32,schema::improbable::WorkerPredicate,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::DeleteMapValue(const google::protobuf::MapKey &)'
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable/standard_library.pb.h(438): note: see reference to class template instantiation 'google::protobuf::internal::MapField<google::protobuf::uint32,schema::improbable::WorkerPredicate,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>' being compiled
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(217): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(215): note: while compiling class template member function 'int google::protobuf::internal::MapField<google::protobuf::uint32,schema::improbable::WorkerPredicate,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const'
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable/standard_library.pb.h(953): note: see reference to function template instantiation 'int google::protobuf::internal::MapField<google::protobuf::uint32,schema::improbable::WorkerPredicate,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const' being compiled
+warning C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_lite.h(152): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_lite.h(151): note: while compiling class template member function 'int google::protobuf::internal::MapFieldLite<Key,T,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>::size(void) const'
+debug           with
+debug           [
+debug               Key=google::protobuf::uint32,
+debug               T=schema::improbable::WorkerPredicate
+debug           ]
+debug   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field.h(220): note: see reference to class template instantiation 'google::protobuf::internal::MapFieldLite<Key,T,google::protobuf::internal::WireFormatLite::TYPE_UINT32,google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,0>' being compiled
+debug           with
+debug           [
+debug               Key=google::protobuf::uint32,
+debug               T=schema::improbable::WorkerPredicate
+debug           ]
+debug   Terrain.cc
+debug   Terrain.pb.cc
+debug   Generating Code...
+debug Link:
+debug   C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\tensorflow\work\SpatialRL\workers\rlworker\build\Release\RLWorker.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ..\worker_sdk\lib\WorkerSdk.lib ..\worker_sdk\lib\libprotobuf.lib ..\worker_sdk\lib\ssl.lib ..\worker_sdk\lib\RakNetLibStatic.lib ..\worker_sdk\lib\CoreSdk.lib ..\worker_sdk\lib\gpr.lib ..\worker_sdk\lib\grpc.lib ..\worker_sdk\lib\grpc++.lib ..\worker_sdk\lib\zlibstatic.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:/tensorflow/work/SpatialRL/workers/rlworker/build/Release/RLWorker.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/tensorflow/work/SpatialRL/workers/rlworker/build/Release/RLWorker.lib" /MACHINE:X64  /machine:x64 RLWorker.dir\Release\GoalSphere.obj
+debug   RLWorker.dir\Release\GoalSphere.pb.obj
+debug   RLWorker.dir\Release\WorldTransform.obj
+debug   RLWorker.dir\Release\WorldTransform.pb.obj
+debug   RLWorker.dir\Release\WorldVelocity.obj
+debug   RLWorker.dir\Release\WorldVelocity.pb.obj
+debug   RLWorker.dir\Release\DroneControls.obj
+debug   RLWorker.dir\Release\DroneControls.pb.obj
+debug   RLWorker.dir\Release\name.obj
+debug   RLWorker.dir\Release\name.pb.obj
+debug   RLWorker.dir\Release\standard_library.obj
+debug   RLWorker.dir\Release\standard_library.pb.obj
+debug   RLWorker.dir\Release\Terrain.obj
+debug   RLWorker.dir\Release\Terrain.pb.obj
+debug   RLWorker.dir\Release\rlworker.obj
+debug   RLWorker.vcxproj -> C:\tensorflow\work\SpatialRL\workers\rlworker\build\Release\RLWorker.exe
+debug FinalizeBuildStatus:
+debug   Deleting file "RLWorker.dir\Release\RLWorker.tlog\unsuccessfulbuild".
+debug   Touching "RLWorker.dir\Release\RLWorker.tlog\RLWorker.lastbuildstate".
+debug Done Building Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj" (default targets).
+debug The target "BeforeGenerateProjectPriFile" listed in a BeforeTargets attribute at "C:\Program Files (x86)\MSBuild\Microsoft\NuGet\Microsoft.NuGet.targets (186,61)" does not exist in the project, and will be ignored.
+debug Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" (1) is building "C:\tensorflow\work\SpatialRL\workers\rlworker\build\create_zip.vcxproj" (4) on node 1 (default targets).
+debug InitializeBuildStatus:
+debug   Creating "x64\Release\create_zip\create_zip.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+debug CustomBuild:
+debug   RLWorker@Windows.exe
+debug FinalizeBuildStatus:
+debug   Deleting file "x64\Release\create_zip\create_zip.tlog\unsuccessfulbuild".
+debug   Touching "x64\Release\create_zip\create_zip.tlog\create_zip.lastbuildstate".
+debug Done Building Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\create_zip.vcxproj" (default targets).
+debug InitializeBuildStatus:
+debug   Creating "x64\Release\ALL_BUILD\ALL_BUILD.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+debug CustomBuild:
+debug   All outputs are up-to-date.
+debug FinalizeBuildStatus:
+debug   Deleting file "x64\Release\ALL_BUILD\ALL_BUILD.tlog\unsuccessfulbuild".
+debug   Touching "x64\Release\ALL_BUILD\ALL_BUILD.tlog\ALL_BUILD.lastbuildstate".
+debug Done Building Project "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" (default targets).
+debug 
+debug Build succeeded.
+debug 
+debug "C:\tensorflow\work\SpatialRL\workers\rlworker\build\ALL_BUILD.vcxproj" (default target) (1) ->
+debug "C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj" (default target) (3) ->
+debug (ClCompile target) -> 
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.pb.cc(292): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.pb.cc(330): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.pb.cc(350): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(291): warning C4800: 'google::protobuf::Map<google::protobuf::uint32,schema::improbable::WorkerPredicate>::size_type': forcing value to bool 'true' or 'false' (performance warning) [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(217): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_lite.h(152): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.pb.cc(412): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.pb.cc(450): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.pb.cc(470): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(291): warning C4800: 'google::protobuf::Map<google::protobuf::uint32,schema::improbable::WorkerPredicate>::size_type': forcing value to bool 'true' or 'false' (performance warning) [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_inl.h(217): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+warning   C:\tensorflow\work\SpatialRL\workers\rlworker\worker_sdk\include\google/protobuf/map_field_lite.h(152): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data [C:\tensorflow\work\SpatialRL\workers\rlworker\build\RLWorker.vcxproj]
+debug 
+debug     12 Warning(s)
+debug     0 Error(s)
+debug 
+debug Time Elapsed 00:00:32.41
+info [4/4] < Build C++ category=success duration=32.6s
+info >>> Build duration=34.9s category=neutral
+info 'sdk.exe build RLWorker' finished duration=35.9s category=success

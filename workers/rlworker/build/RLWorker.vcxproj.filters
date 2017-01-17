@@ -31,6 +31,12 @@
     <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\terrain\Terrain.cc">
       <Filter>Source Files</Filter>
     </ClCompile>

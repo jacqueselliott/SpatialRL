@@ -323,6 +323,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\DroneControls.pb.cc"  />
     <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.cc"  />
     <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\player\name.pb.cc"  />
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.cc"  />
+    <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\standard_library.pb.cc"  />
     <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\terrain\Terrain.cc"  />
     <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\generated\improbable\terrain\Terrain.pb.cc"  />
     <ClCompile Include="C:\tensorflow\work\SpatialRL\workers\rlworker\rlworker.cc"  />
