@@ -1,7 +1,0 @@
-package improbable.player;
-
-component DroneControls {
-    id = 1003;
-    // Force applied to player object
-    Vector3f force = 1;
-}

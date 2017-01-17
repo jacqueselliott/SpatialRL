@@ -1,5 +1,0 @@
-{
-  "build_type": "cpp",
-  "build_assets": ["rlworker"],
-  "generate_build_scripts": false
-}
