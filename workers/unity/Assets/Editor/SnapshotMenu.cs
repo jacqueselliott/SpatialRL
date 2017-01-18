@@ -22,8 +22,8 @@ public class SnapshotMenu : MonoBehaviour
         
         snapshotEntities.Add(new EntityId(currentEntityId++), TerrainEntityTemplate.GenerateTerrainSnapshotEntityTemplate());
         snapshotEntities.Add(new EntityId(currentEntityId++), GoalSphereEntityTemplate.GenerateGoalSphereSnapshotEntityTemplate());
-        snapshotEntities.Add(new EntityId(currentEntityId++), DroneEntityTemplate.GenerateDroneSnapshotEntityTemplate(new Coordinates(0, 5, 0)));
-        snapshotEntities.Add(new EntityId(currentEntityId++), DroneEntityTemplate.GenerateRLDroneSnapshotEntityTemplate(new Coordinates(5, 5, 5)));
+        snapshotEntities.Add(new EntityId(currentEntityId++), DroneEntityTemplate.GenerateRLDroneSnapshotEntityTemplate(new Coordinates(0, 5, 0)));
+        //snapshotEntities.Add(new EntityId(currentEntityId++), DroneEntityTemplate.GenerateRLDroneSnapshotEntityTemplate(new Coordinates(5, 5, 5)));
 
         SaveSnapshot(snapshotEntities);
     }

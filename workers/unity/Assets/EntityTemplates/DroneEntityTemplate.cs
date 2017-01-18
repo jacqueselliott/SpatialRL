@@ -51,8 +51,7 @@ namespace Assets.EntityTemplates
             drone.Add(new WorldVelocity.Data(new WorldVelocityData(new Vector3f(0, 0, 0))));
 
             var acl = Acl.Build()
-                .SetReadAccess(CommonPredicates.PhysicsOrVisual)
-                .SetReadAccess(Acl.MakePredicate(Acl.MakeClaim("rl")))
+                .SetReadAccess(Acl.MakePredicate(CommonClaims.Physics, CommonClaims.Visual, Acl.MakeClaim("rl")))
                 .SetWriteAccess<WorldTransform>(CommonPredicates.PhysicsOnly)
                 .SetWriteAccess<Name>(CommonPredicates.VisualOnly)
                 .SetWriteAccess<DroneControls>(Acl.MakePredicate(Acl.MakeClaim("rl")))
