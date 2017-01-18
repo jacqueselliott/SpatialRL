@@ -10,7 +10,7 @@
     },
     "entity_interest": {
       "range_entity_interest": {
-        "radius": 2
+        "radius": 200
       }
     },
     "streaming_query": [],
@@ -27,12 +27,12 @@
        "windows": {
          "artifact_name": "RLWorker@Windows.zip",
          "command": "RLWorker@Windows.exe",
-         "arguments": ["rl0"]
+         "arguments": ["${IMPROBABLE_WORKER_ID}"]
        },
        "macos": {
          "artifact_name": "RLWorker@Mac.zip",
          "command": "RLWorker@Mac",
-         "arguments": ["rl0"]
+         "arguments": ["${IMPROBABLE_WORKER_ID}"]
        }
    },
    "external": {
@@ -40,7 +40,7 @@
       "run_type": "EXECUTABLE",
       "windows": {
         "command": "build/Release/RLWorker.exe",
-        "arguments": ["rl0"]
+        "arguments": ["${IMPROBABLE_WORKER_ID}"]
       }
     }
 }

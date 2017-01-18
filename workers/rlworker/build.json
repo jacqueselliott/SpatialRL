@@ -4,6 +4,10 @@
       "name": "Codegen",
       "steps": [
         {
+          "name": "Dependencies",
+          "arguments": ["worker_package", "unpack"]
+        },
+        {
             "name": "C++",
             "arguments": ["process_schema", "--output", "generated", "--language", "cpp", "-i", "../../build/dependencies/schema/WorkerSdkSchema",
                       "-i", "../../schema"]

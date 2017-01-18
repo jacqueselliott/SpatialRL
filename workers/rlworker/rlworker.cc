@@ -48,7 +48,7 @@ int main(int argc, char** argv) {
   }
 
   worker::ConnectionParameters parameters;
-  parameters.WorkerType = "rlworker";
+  parameters.WorkerType = kWorkerType;
   parameters.WorkerId = argv[1];
   parameters.Network.ConnectionType = worker::NetworkConnectionType::kTcp;
   parameters.Network.UseExternalIp = false;
@@ -64,8 +64,7 @@ int main(int argc, char** argv) {
   worker::Dispatcher dispatcher = worker::Dispatcher();
 
   std::cout << kWorkerType << " started" << std::endl;
-  //TODO: continue and work out the dispatcher
-  for (;;) {
+  while (connection.IsConnected()) {
 	  RunEventLoop(connection, dispatcher);
   }
 }

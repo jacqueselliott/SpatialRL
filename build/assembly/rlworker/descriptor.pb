@@ -1,5 +1,5 @@
 
-73RLWorker@Windows.exerl0"
+KGRLWorker@Windows.exe${IMPROBABLE_WORKER_ID}"
 RLWorker@Windows.zip
-+'RLWorker@Macrl0"
+?;RLWorker@Mac${IMPROBABLE_WORKER_ID}"
 RLWorker@Mac.zip
