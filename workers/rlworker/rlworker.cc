@@ -9,37 +9,43 @@
 #include <thread>
 
 using ::improbable::player::DroneControls;
-using ::improbable::math::Vector3f;
-
+using ::improbable::general::WorldTransform;
+using namespace improbable::math;
+using namespace worker;
 
 static const std::string kWorkerType = "RLWorker";
 static const std::string kLoggerName = "rlworker.cc";
 
-void RunEventLoop(worker::Connection& connection, worker::Dispatcher& dispatcher) {
-	static const unsigned kFramesPerSecond = 60;
+Entity sphereEntity;
+Entity droneEntity;
 
-	auto time = std::chrono::high_resolution_clock::now();
-	while (true) {
-		auto op_list = connection.GetOpList(0 /* non-blocking */);
+Coordinates* goal;
 
-		// Invoke user-provided callbacks.
-		dispatcher.Process(op_list);
-
-		// Do other work here...
-
-		time += std::chrono::microseconds(1000000 / kFramesPerSecond);
-		std::this_thread::sleep_until(time);
-
-		float x = 1;
-		float y = 0;
-		float z = 0;
-		
-		Vector3f direction = Vector3f(x, y, z);
-		DroneControls::Update update;
-		update.set_force(direction);
-		connection.SendComponentUpdate<DroneControls>(2, update);	
+void UpdateEntity(worker::Connection& connection, worker::View& view, const worker::EntityId& entity_id) {
+	auto& entities = view.Entities;
+	if (entities.find(entity_id) == entities.end()) {
+		return;
 	}
+	auto& entity = entities[entity_id];
+	if (entity_id != 0 && entity_id != 2) {
+		sphereEntity = entity;
+		*goal = sphereEntity.Get<WorldTransform>()->position();
+	}
+	else if (entity_id == 0) {
+	}
+	else {
+		if (goal != nullptr) {
+			Coordinates current = entity.Get<WorldTransform>()->position();
+			Vector3f force = Vector3f((float)current.x() - (float)goal->x(), (float)current.y() - (float)goal->y(), (float)current.z() - (float)goal->z());
+			DroneControls::Update update = DroneControls::Update().set_force(force);
+			connection.SendComponentUpdate<DroneControls>(entity_id, update);
+		}
+	}
+
+	
 }
+
+
 
 
 int main(int argc, char** argv) {
@@ -59,12 +65,24 @@ int main(int argc, char** argv) {
   }
 
   worker::Connection connection = worker::Connection(hostname, 7777, parameters);
-  worker::View view = worker::View();
+  worker::View view;
+
+  view.OnAuthorityChange<DroneControls>([&](const worker::AuthorityChangeOp& op) {
+	  if (op.HasAuthority) {
+		  UpdateEntity(connection, view, op.EntityId);
+	  }
+  });
+  view.OnComponentUpdate<WorldTransform>([&](const worker::ComponentUpdateOp<WorldTransform>& op) {
+	  UpdateEntity(connection, view, op.EntityId);
+  });
 
   worker::Dispatcher dispatcher = worker::Dispatcher();
-
+ 
   std::cout << kWorkerType << " started" << std::endl;
-  while (connection.IsConnected()) {
-	  RunEventLoop(connection, dispatcher);
+  for (;;) {
+	  // Get the operations since the last time.
+	  auto op_list = connection.GetOpList(0);
+	  // Process and dispatch.
+	  view.Process(op_list);
   }
 }
