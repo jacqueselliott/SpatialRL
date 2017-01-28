@@ -37,8 +37,7 @@ namespace Assets.EntityTemplates
         private static Acl BuildACL()
         {
             var acl = Acl.Build()
-                // Both FSim (server) workers and client workers granted read access over all states
-                .SetReadAccess(CommonPredicates.PhysicsOrVisual)
+                .SetReadAccess(Acl.MakePredicate(CommonClaims.Physics, CommonClaims.Visual, Acl.MakeClaim("rl")))
                 // Only FSim workers granted write access over WorldTransform component
                 .SetWriteAccess<WorldTransform>(CommonPredicates.PhysicsOnly);
             return acl;
