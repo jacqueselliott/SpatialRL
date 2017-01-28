@@ -19,7 +19,6 @@ namespace Assets.EntityTemplates
             // Define components attached to snapshot entity
             goalSphereEntity.Add(new WorldTransform.Data(new WorldTransformData(RandomCoordinates(), 0)));
             goalSphereEntity.Add(new Name.Data(new NameData("RL")));
-
             goalSphereEntity.SetAcl(BuildACL());
 
             return goalSphereEntity;
