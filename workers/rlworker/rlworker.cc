@@ -21,18 +21,23 @@ Entity sphereEntity;
 
 bool sphereFound = false;
 int foo = 0;
+const worker::EntityId& goal_id = 1;
 
 void UpdateEntity(worker::Connection& connection, worker::View& view, const worker::EntityId& entity_id) {
 
 	foo++;
-	foo = foo % 20;
+	foo = foo % 7;
 	auto& entities = view.Entities;
 	if (entities.find(entity_id) == entities.end()) {
 		return;
 	}
 	Entity entity = entities[entity_id];
 	if (entity_id == 1) {
-		sphereEntity = entities[1];
+		sphereEntity = entities[goal_id];
+		sphereFound = true;
+	}
+	if (entities.find(goal_id) != entities.end()) {
+		sphereEntity = entities[goal_id];
 		sphereFound = true;
 	}
 	if (entity_id == 2)
@@ -51,8 +56,8 @@ void UpdateEntity(worker::Connection& connection, worker::View& view, const work
 		else {
 			int decider = foo % 2;
 			float xCoord = 2 * decider - 1;
-			//Vector3f force = Vector3f(xCoord*foo, 0.0, 0.0);
-			Vector3f force = Vector3f(12.12/10.0, 0.0, 7.44/10.0);
+			Vector3f force = Vector3f(xCoord*foo, 0.0, 0.0);
+		
 
 			DroneControls::Update update = DroneControls::Update();
 			update.set_force(force);
@@ -60,6 +65,10 @@ void UpdateEntity(worker::Connection& connection, worker::View& view, const work
 			const std::string& message = "update";
 			connection.SendLogMessage(worker::LogLevel::kInfo, logger_name, message);
 			connection.SendComponentUpdate<DroneControls>(entity_id, update);
+			if (entities.find(goal_id) != entities.end()) {
+				sphereEntity = entities[goal_id];
+				sphereFound = true;
+			}
 		}
 
 		return;
