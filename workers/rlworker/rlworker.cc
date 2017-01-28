@@ -17,14 +17,54 @@ static const std::string kWorkerType = "RLWorker";
 static const std::string kLoggerName = "rlworker.cc";
 
 Entity sphereEntity;
-Entity droneEntity;
+//Entity droneEntity;
+
+bool sphereFound = false;
+int foo = 0;
 
 void UpdateEntity(worker::Connection& connection, worker::View& view, const worker::EntityId& entity_id) {
+
+	foo++;
+	foo = foo % 20;
 	auto& entities = view.Entities;
 	if (entities.find(entity_id) == entities.end()) {
 		return;
 	}
+	Entity entity = entities[entity_id];
+	if (entity_id == 1) {
+		sphereEntity = entities[1];
+		sphereFound = true;
+	}
+	if (entity_id == 2)
+	{
+		if (sphereFound) {
+			Coordinates droneCoords = entity.Get<WorldTransform>()->position();
+			Coordinates sphereCoords = sphereEntity.Get<WorldTransform>()->position();
+			Vector3f force = Vector3f((float)sphereCoords.x() - (float)droneCoords.x(), 0.0, 0.0);
+			DroneControls::Update update = DroneControls::Update();
+			update.set_force(force);
+			const std::string& logger_name = "cppworker";
+			const std::string& message = "update";
+			connection.SendLogMessage(worker::LogLevel::kInfo, logger_name, message);
+			connection.SendComponentUpdate<DroneControls>(entity_id, update);
+		}
+		else {
+			int decider = foo % 2;
+			float xCoord = 2 * decider - 1;
+			//Vector3f force = Vector3f(xCoord*foo, 0.0, 0.0);
+			Vector3f force = Vector3f(12.12/10.0, 0.0, 7.44/10.0);
 
+			DroneControls::Update update = DroneControls::Update();
+			update.set_force(force);
+			const std::string& logger_name = "cppworker";
+			const std::string& message = "update";
+			connection.SendLogMessage(worker::LogLevel::kInfo, logger_name, message);
+			connection.SendComponentUpdate<DroneControls>(entity_id, update);
+		}
+
+		return;
+	}
+	/*
 	droneEntity = entities[2];
 	sphereEntity = entities[1];
 
@@ -35,6 +75,7 @@ void UpdateEntity(worker::Connection& connection, worker::View& view, const work
 	//force = Vector3f((float)current.x() - (float)goal.x(), (float)current.y() - (float)goal.y(), (float)current.z() - (float)goal.z());
 	DroneControls::Update update = DroneControls::Update().set_force(force);
 	connection.SendComponentUpdate<DroneControls>(2, update);
+	*/
 }
 
 
@@ -65,6 +106,9 @@ int main(int argc, char** argv) {
 	  }
   });
   view.OnComponentUpdate<WorldTransform>([&](const worker::ComponentUpdateOp<WorldTransform>& op) {
+	  UpdateEntity(connection, view, op.EntityId);
+  });
+  view.OnAddEntity([&](const worker::AddEntityOp& op) {
 	  UpdateEntity(connection, view, op.EntityId);
   });
 

@@ -5,6 +5,7 @@ using Improbable.Gameplay;
 using Improbable.Unity.Core;
 using Improbable.Worker;
 using Assets.EntityTemplates;
+using Improbable.Math;
 
 namespace GameLogic
 {
@@ -24,10 +25,25 @@ namespace GameLogic
             if (other != null && other.gameObject.tag == "GoalSphere")
             {
                 GoalSphereWriter.Send(new GoalSphere.Update().SetCollided(true));
-                DeleteGoalSphere(other.gameObject);
+                TeleportGoalSphere(other.gameObject);
 
-                CreateGoalSphere();
+                //DeleteGoalSphere(other.gameObject);
+
+                //CreateGoalSphere();
             }
+        }
+
+        private void TeleportGoalSphere(GameObject goalObject)
+        {
+            GoalMove goalMove = goalObject.GetComponent<GoalMove>();
+            goalMove.Move(RandomCoordinates());
+        }
+
+        private static Coordinates RandomCoordinates()
+        {
+            float x = (Random.value * 50) - 25;
+            float z = (Random.value * 40) - 20;
+            return new Coordinates(x, 1, z);
         }
 
         private void DeleteGoalSphere(GameObject goalObject)

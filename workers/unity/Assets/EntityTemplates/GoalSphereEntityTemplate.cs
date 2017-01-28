@@ -4,6 +4,7 @@ using Improbable.General;
 using Improbable.Math;
 using Improbable.Unity.Core.Acls;
 using Improbable.Gameplay;
+using Improbable.Player;
 
 namespace Assets.EntityTemplates
 {
@@ -17,6 +18,7 @@ namespace Assets.EntityTemplates
 
             // Define components attached to snapshot entity
             goalSphereEntity.Add(new WorldTransform.Data(new WorldTransformData(RandomCoordinates(), 0)));
+            goalSphereEntity.Add(new Name.Data(new NameData("RL")));
 
             goalSphereEntity.SetAcl(BuildACL());
 
@@ -39,7 +41,8 @@ namespace Assets.EntityTemplates
             var acl = Acl.Build()
                 .SetReadAccess(Acl.MakePredicate(CommonClaims.Physics, CommonClaims.Visual, Acl.MakeClaim("rl")))
                 // Only FSim workers granted write access over WorldTransform component
-                .SetWriteAccess<WorldTransform>(CommonPredicates.PhysicsOnly);
+                .SetWriteAccess<WorldTransform>(CommonPredicates.PhysicsOnly)
+                .SetWriteAccess<Name>(Acl.MakePredicate(Acl.MakeClaim("rl")));
             return acl;
         }
 
