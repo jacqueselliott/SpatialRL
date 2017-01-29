@@ -1,0 +1,15 @@
+tensorflow/core/framework/graph.pb.h
+tensorflow/core/framework/tensor.h
+tensorflow/core/graph/default_device.h
+tensorflow/core/graph/graph_def_builder.h
+tensorflow/core/lib/core/errors.h
+tensorflow/core/lib/core/stringpiece.h
+tensorflow/core/lib/core/threadpool.h
+tensorflow/core/lib/io/path.h
+tensorflow/core/lib/strings/stringprintf.h
+tensorflow/core/platform/init_main.h
+tensorflow/core/platform/logging.h
+tensorflow/core/platform/types.h
+tensorflow/core/platform/env.h
+tensorflow/core/public/session.h
+tensorflow/core/util/command_line_flags.h

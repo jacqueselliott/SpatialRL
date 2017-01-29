@@ -3,13 +3,17 @@
 #include <iostream>
 #include <string>
 #include <improbable/general/WorldTransform.h>
+
+#include <improbable/general/WorldVelocity.h>
 #include <improbable/player/DroneControls.h>
 #include <improbable/math/vector3f.h>
 #include <chrono>
 #include <thread>
+// #include "tensorflow/tensorflow/blackbox/blackbox.cc"
 
 using ::improbable::player::DroneControls;
 using ::improbable::general::WorldTransform;
+using ::improbable::general::WorldVelocity;
 using namespace improbable::math;
 using namespace worker;
 
@@ -18,6 +22,7 @@ static const std::string kLoggerName = "rlworker.cc";
 
 Entity sphereEntity;
 
+Vector3f intToForce(int action);
 
 bool sphereFound = false;
 int foo = 0;
@@ -46,23 +51,33 @@ void UpdateEntity(worker::Connection& connection, worker::View& view, const work
 		if (sphereFound) {
 			Coordinates droneCoords = entity.Get<WorldTransform>()->position();
 			Coordinates sphereCoords = sphereEntity.Get<WorldTransform>()->position();
-			Vector3f force = Vector3f((float)sphereCoords.x() - (float)droneCoords.x(), 0.0, (float)sphereCoords.z() - (float)droneCoords.z());
-			float norm = sqrt(((float)sphereCoords.x() - (float)droneCoords.x())*((float)sphereCoords.x() - (float)droneCoords.x()) + ((float)sphereCoords.z() - (float)droneCoords.z())*((float)sphereCoords.z() - (float)droneCoords.z()));
-			force = Vector3f(((float)sphereCoords.x() - (float)droneCoords.x())/norm, 0.0, ((float)sphereCoords.z() - (float)droneCoords.z())/norm);
+			
+			Vector3f droneVelocity = entity.Get<WorldVelocity>()->velocity();
 
-			DroneControls::Update update = DroneControls::Update();
-			update.set_force(force);
-			const std::string& logger_name = "cppworker";
-			const std::string& message = "update";
-			//connection.SendLogMessage(worker::LogLevel::kError, logger_name, message);
-			connection.SendComponentUpdate<DroneControls>(entity_id, update);
+			// int action = getForce(CoordinatesToVector(droneCoords),
+			// 					  Vector3fToVector(droneVelocity),
+			// 					  CoordinatesToVector(sphereCoords));
+
+			int action = 1;
+
+			if(action != -1) {
+				Vector3f force = intToForce(action);
+				DroneControls::Update update = DroneControls::Update();
+				update.set_force(force);
+				const std::string& logger_name = "cppworker";
+				const std::string& message = "update";
+				connection.SendComponentUpdate<DroneControls>(entity_id, update);
+			}
+
+			else {
+				//IF NEED RESET ADD HERE
+			}
+			
 		}
 		else {
 			int decider = foo % 2;
 			float xCoord = 2 * decider - 1;
 			Vector3f force = Vector3f(xCoord*foo, 0.0, 0.0);
-		
-
 			DroneControls::Update update = DroneControls::Update();
 			update.set_force(force);
 			const std::string& logger_name = "cppworker";
@@ -77,22 +92,57 @@ void UpdateEntity(worker::Connection& connection, worker::View& view, const work
 
 		return;
 	}
-	/*
-	droneEntity = entities[2];
-	sphereEntity = entities[1];
 
-	Vector3f force = Vector3f(1.0, 0.0, 0.0);
+}
 
-	Coordinates goal = sphereEntity.Get<WorldTransform>()->position();
-	Coordinates current = droneEntity.Get<WorldTransform>()->position();
-	//force = Vector3f((float)current.x() - (float)goal.x(), (float)current.y() - (float)goal.y(), (float)current.z() - (float)goal.z());
-	DroneControls::Update update = DroneControls::Update().set_force(force);
-	connection.SendComponentUpdate<DroneControls>(2, update);
-	*/
+std::vector<float> Vector3fToVector(Vector3f inputVector) {
+	std::vector<float> ans;
+
+	ans.push_back(inputVector.x());
+	ans.push_back(inputVector.y());
+	ans.push_back(inputVector.z());
+
+	return ans;
+}
+
+std::vector<float> CoordinatesToVector(Coordinates inputVector) {
+	std::vector<float> ans;
+
+	ans.push_back(inputVector.x());
+	ans.push_back(inputVector.y());
+	ans.push_back(inputVector.z());
+
+	return ans;
 }
 
 
+Vector3f intToForce(int action) {
+	if(action == 0) {
+		Vector3f fuck = Vector3f(1.0,0.0,0.0);
+		return fuck;
+		//fuck = Vector3f((float)1.0, (float)0.0, (float)0.0);
+	}
+	else if(action == 1) {
+		Vector3f fuck = Vector3f(0.0,0.0,1.0);
+		return fuck;
+		//fuck = Vector3f(0.0, 0.0, 1.0);
+	}
 
+	else if(action == 2) {
+		Vector3f fuck = Vector3f(0.0,0.0,-1.0);
+		return fuck;
+		//fuck = Vector3f(0.0, 0.0, -1.0);
+	}
+
+	else if(action == 3) {
+		Vector3f fuck = Vector3f(-1.0,0.0,0.0);
+		return fuck;
+		//fuck = Vector3f((float)-1.0, (float)0.0, (float)0,0);
+	}
+	Vector3f fuck = Vector3f(0.0,0.0,0.0);
+
+	return fuck;
+}
 
 int main(int argc, char** argv) {
   if (argc < 2 || 3 < argc) {
@@ -113,6 +163,8 @@ int main(int argc, char** argv) {
   worker::Connection connection = worker::Connection(hostname, 7777, parameters);
   connection.SendInterestedComponents<WorldTransform>(1);
   connection.SendInterestedComponents<WorldTransform>(2);
+  connection.SendInterestedComponents<WorldVelocity>(2);
+
   worker::View view;
 
   view.OnAuthorityChange<DroneControls>([&](const worker::AuthorityChangeOp& op) {

@@ -1,8 +1,8 @@
 {
     "name": "alpha_white_gee_350",
     "project_version": "0.0.2",
-    "sdk_version": "9.0.2",
+    "sdk_version": "9.1.0",
     "dependencies": [
-		{"name": "WorkerSdkSchema", "version": "9.0.2"}
+		{"name": "WorkerSdkSchema", "version": "9.1.0"}
     ]
 }
