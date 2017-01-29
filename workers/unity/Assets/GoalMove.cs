@@ -12,20 +12,19 @@ public class GoalMove : MonoBehaviour {
     [Require]
     private WorldTransform.Writer WorldTransformWriter;
 
-
     // Use this for initialization
     void OnEnable()
     {
-
     }
 
     public void Move(Coordinates coordinate)
     {
-
         transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
+        transform.position = coordinate.ToVector3();
 
         WorldTransformWriter.Send(new WorldTransform.Update().SetPosition(coordinate)
                                                                         .SetRotation((uint)transform.rotation.eulerAngles.y));
+
 
     }
 

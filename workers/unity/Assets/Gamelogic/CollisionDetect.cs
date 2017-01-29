@@ -24,11 +24,12 @@ namespace GameLogic
             Debug.Log("collision");
             if (other != null && other.gameObject.tag == "GoalSphere")
             {
-                GoalSphereWriter.Send(new GoalSphere.Update().SetCollided(true));
+                Debug.Log("c0llided with goal");
+
+
+                //GoalSphereWriter.Send(new GoalSphere.Update().SetCollided(true));
                 TeleportGoalSphere(other.gameObject);
-
                 //DeleteGoalSphere(other.gameObject);
-
                 //CreateGoalSphere();
             }
         }
@@ -36,7 +37,14 @@ namespace GameLogic
         private void TeleportGoalSphere(GameObject goalObject)
         {
             GoalMove goalMove = goalObject.GetComponent<GoalMove>();
-            goalMove.Move(RandomCoordinates());
+
+            Debug.Log(goalMove);
+
+            Coordinates rc = RandomCoordinates();
+
+            Debug.Log(rc);
+
+            goalMove.Move(rc);
         }
 
         private static Coordinates RandomCoordinates()

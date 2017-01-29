@@ -17,7 +17,7 @@ static const std::string kWorkerType = "RLWorker";
 static const std::string kLoggerName = "rlworker.cc";
 
 Entity sphereEntity;
-//Entity droneEntity;
+
 
 bool sphereFound = false;
 int foo = 0;
@@ -40,17 +40,21 @@ void UpdateEntity(worker::Connection& connection, worker::View& view, const work
 		sphereEntity = entities[goal_id];
 		sphereFound = true;
 	}
+
 	if (entity_id == 2)
 	{
 		if (sphereFound) {
 			Coordinates droneCoords = entity.Get<WorldTransform>()->position();
 			Coordinates sphereCoords = sphereEntity.Get<WorldTransform>()->position();
-			Vector3f force = Vector3f((float)sphereCoords.x() - (float)droneCoords.x(), 0.0, 0.0);
+			Vector3f force = Vector3f((float)sphereCoords.x() - (float)droneCoords.x(), 0.0, (float)sphereCoords.z() - (float)droneCoords.z());
+			float norm = sqrt(((float)sphereCoords.x() - (float)droneCoords.x())*((float)sphereCoords.x() - (float)droneCoords.x()) + ((float)sphereCoords.z() - (float)droneCoords.z())*((float)sphereCoords.z() - (float)droneCoords.z()));
+			force = Vector3f(((float)sphereCoords.x() - (float)droneCoords.x())/norm, 0.0, ((float)sphereCoords.z() - (float)droneCoords.z())/norm);
+
 			DroneControls::Update update = DroneControls::Update();
 			update.set_force(force);
 			const std::string& logger_name = "cppworker";
 			const std::string& message = "update";
-			connection.SendLogMessage(worker::LogLevel::kInfo, logger_name, message);
+			//connection.SendLogMessage(worker::LogLevel::kError, logger_name, message);
 			connection.SendComponentUpdate<DroneControls>(entity_id, update);
 		}
 		else {
@@ -63,7 +67,7 @@ void UpdateEntity(worker::Connection& connection, worker::View& view, const work
 			update.set_force(force);
 			const std::string& logger_name = "cppworker";
 			const std::string& message = "update";
-			connection.SendLogMessage(worker::LogLevel::kInfo, logger_name, message);
+			//connection.SendLogMessage(worker::LogLevel::kError, logger_name, message);
 			connection.SendComponentUpdate<DroneControls>(entity_id, update);
 			if (entities.find(goal_id) != entities.end()) {
 				sphereEntity = entities[goal_id];
@@ -107,6 +111,8 @@ int main(int argc, char** argv) {
   }
 
   worker::Connection connection = worker::Connection(hostname, 7777, parameters);
+  connection.SendInterestedComponents<WorldTransform>(1);
+  connection.SendInterestedComponents<WorldTransform>(2);
   worker::View view;
 
   view.OnAuthorityChange<DroneControls>([&](const worker::AuthorityChangeOp& op) {
